@@ -1,0 +1,6 @@
+alu 9tick
+file reg 10tick
+call stack 1 tick
+PC 1 tick
+memory yazma 5 tick
+instruction memory 4-32 tick

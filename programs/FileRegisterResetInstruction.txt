@@ -1,0 +1,16 @@
+MOV r0 r1
+MOV r0 r2
+MOV r0 r3
+MOV r0 r4
+MOV r0 r5
+MOV r0 r6
+MOV r0 r7
+MOV r0 r8
+MOV r0 r9
+MOV r0 r10
+MOV r0 r11
+MOV r0 r12
+MOV r0 r13
+MOV r0 r14
+MOV r0 r15
+HLT

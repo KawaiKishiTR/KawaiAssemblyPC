@@ -1,0 +1,19 @@
+// atamalar
+LDI r1 5
+LDI r2 3
+
+//basit instructionlar
+ADD r1 r2 r3
+SUB r1 r2 r4
+NOR r1 r2 r5
+AND r1 r2 r6
+XOR r1 r2 r7
+RSH r1 r8
+
+//derleyici tabanlı instructionlar
+LSH r1 r9
+MOV r1 r10
+INC r1
+DEC r2
+NOT r1 r11
+NEG r1 r12

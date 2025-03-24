@@ -1,0 +1,14 @@
+
+// for loop örneği
+LDI r15 30
+
+LDI r1 0
+LDI r2 1
+
+.loop DEC r15
+BRH zero .end
+ADD r1 r2 r3
+MOV r2 r1
+MOV r3 r2
+JMP .loop
+.end

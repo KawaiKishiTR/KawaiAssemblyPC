@@ -1,0 +1,19 @@
+NOP
+NOP
+NOP
+LDI r1 5
+LDI r2 6
+
+//JMP BRH CAL RET LOD STR CMP 
+JMP .jump
+NOP
+NOP
+NOP
+.jump
+DEC r2
+CMP r1 r2
+BRH zero .end
+RET
+.end
+CAL .jump
+HLT

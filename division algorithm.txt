@@ -1,0 +1,47 @@
+//Bölme işlemi mantıksal kodu
+//değerler 
+LDI r1 10 // bölünen
+LDI r2 5 // bölen
+LDI r15 0 // sonuç
+
+// böleni kopyala
+MOV r2 r3
+
+.one_more_left_shift
+LSH r3 r4
+RSH r4 r4
+CMP r3 r4
+BRH != .bölmeye devam //böleni mümkün olduğunca left shift e maruz bırakıp büyütüyoruz
+LSH r3 r3
+JMP .one_more_left_shift
+
+.bölmeye devam
+CMP r1 r3
+BRH notcarry .çıkarılamaz 
+SUB r1 r2 r1 //çıkarılabilir ise sayıyı çıkarıp sonucu bir kaydırıp sonuna 1 ekliyoruz
+LSH r15 r15
+ADI r15 1
+JMP .loop_end
+.çıkarılamaz
+LSH r15 r15 // çıkarılamaz ise sadece sonucu kaydırıyoruz
+.loop_end //işlem yapıldıktan sonra bölen sayımızı sağa kaydırmayı dneiyoruz
+RSH r3 r4 //eğer sağa kaydırılabiliyorsa bir kez daha bölme yapmayı deniyoruz
+LSH r4 r4 
+CMP r3 r4
+BRH = .bölmeye devam
+HLT // programı bitiriyoruz
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
